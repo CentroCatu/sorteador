@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script type="text/javascript">
+                var participantes = [];
+                var regalo;
+
+                function agregarRegalo() {
+                    regalo = prompt("Agregar el regalo a sortear");
+                }
+
+                function agregarParticipantes() {
+                    var participante = prompt("Agregar nombre participante");
+                    participantes.push(participante);
+                }
+
+                function sortear() {
+                    var gana = participantes[Math.floor(Math.random()*participantes.length)];
+                    alert("EL GANADOR DE " + regalo + " ES "  + gana);
+                }
+        </script>
+    </head>
+    <body>
+        <h1>El Sorteador del CATU v.0.1</h1>
+        <h3>Acciones</h3>
+        <button onclick="agregarRegalo()">Agregar Regalo</button>
+        <br>
+        <button onclick="agregarParticipantes()">Agregar Participantes</button>
+        <br>
+        <button onclick="sortear()">Sortear</button>
+    </body>
+</html>
